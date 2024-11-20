@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFECD2, #FCB69F, #FF5F6D, #FFC371); /* Fondo degradado elegante */
+    background-size: 400% 400%; /* Efecto de movimiento suave */
+    animation: gradientAnimation 10s ease infinite; /* Animación infinita */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif; /* Fuente elegante */
+    overflow: hidden;
+}
+
+/* Animación de fondo */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor del formulario */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    text-align: center;
+}
+
+/* Efecto de zoom al pasar el ratón */
+.container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Título del formulario */
+h2 {
+    font-size: 28px;
+    color: #4A148C; /* Color más intenso */
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif; /* Fuente más clara */
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="file"] {
+    width: calc(100% - 30px); /* Ajuste de ancho */
+    padding: 12px;
+    margin: 10px auto;
+    border: 2px solid #9A67EA; /* Morado suave para bordes */
+    border-radius: 10px;
+    background: #F3E5F5; /* Fondo lila claro */
+    font-size: 16px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: border 0.3s, box-shadow 0.3s;
+    font-family: 'Lora', serif; /* Fuente elegante */
+}
+
+/* Efecto al enfocar los campos */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+    border-color: #B39DDB; /* Morado más claro al enfocar */
+    box-shadow: 0 0 10px rgba(179, 157, 219, 0.5);
+    outline: none;
+}
+
+/* Botón de enviar */
+input[type='submit'] {
+    background: linear-gradient(to right, #FF8A80, #FF80AB);
+    color: #fff;
+    padding: 14px 20px;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-family: 'Poppins', sans-serif; /* Fuente más clara para botones */
+}
+
+/* Efecto hover para el botón de enviar */
+input[type='submit']:hover {
+    background: linear-gradient(to right, #FF80AB, #FF8A80);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 128, 171, 0.5);
+}
+
+/* Botón de cancelar */
+.btn {
+    background: linear-gradient(to right, #69EACB, #EACCF8);
+    color: #fff;
+    padding: 14px 20px;
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Efecto hover para el botón de cancelar */
+.btn:hover {
+    background: linear-gradient(to right, #EACCF8, #69EACB);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(106, 234, 203, 0.5);
+}
+
+/* Estilo de mensajes */
+.message {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #81C784; /* Verde éxito */
+    color: white;
+}
+
+.message.error {
+    background-color: #E57373; /* Rojo error */
+    color: white;
+}
+
+
+
+
+
+

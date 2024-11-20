@@ -1,0 +1,162 @@
+body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FF6FD8, #3813C2, #0ABCF9, #45E994);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow: hidden;
+        }
+
+        /* Animación del fondo */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Contenedor del formulario */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+        /* Estilo del formulario */
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Título del formulario */
+        h1 {
+            font-size: 32px;
+            color: #4A148C;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        /* Campos de entrada */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 2px solid #FF6FD8;
+            border-radius: 15px;
+            background: #FFF3FD;
+            font-size: 16px;
+            box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+            outline: none;
+        }
+
+        /* Efecto al enfocar los campos */
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #0ABCF9;
+            box-shadow: 0 0 10px rgba(10, 188, 249, 0.6);
+        }
+
+        /* Botón de enviar */
+        input[type="submit"],
+        button {
+            background: linear-gradient(45deg, #FF6FD8, #3813C2);
+            color: #fff;
+            padding: 14px 20px;
+            margin-top: 20px;
+            width: 100%;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 15px rgba(255, 111, 216, 0.4), 0 0 10px rgba(255, 111, 216, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+         /* Efecto hover y clic para el botón */
+        input[type="submit"]:hover,
+        button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 111, 216, 0.7), 0 0 15px rgba(255, 111, 216, 0.6);
+        }
+
+        input[type="submit"]:active,
+        button:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 10px rgba(255, 111, 216, 0.5);
+        }
+
+        /* Estilo para el mensaje de éxito */
+        .message.success {
+            color: #fff;
+            background: linear-gradient(45deg, #45E994, #0ABCF9);
+            padding: 12px;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilo para el mensaje de bienvenida */
+        .welcome-message {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #4A148C;
+            animation: fadeIn 1.5s ease;
+        }
+         /* Contenedor de botones de confirmación y acceso */
+        .confirm-buttons,
+        .access-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        /* Estilo de mensaje de error con animación de vibración */
+        .message.bye {
+            background-color: #E57373;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 30px; /* Espacio para separar del botón de inicio de sesión */
+            animation: shake 0.4s ease;
+            animation-iteration-count: 1;
+            box-shadow: 0 4px 8px rgba(229, 115, 115, 0.5);
+        }
+
+        /* Animación de vibración para el mensaje de error */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+
+        /* Inicialmente ocultar los botones de acceso */
+        .access-buttons {
+            display: none;
+        }
